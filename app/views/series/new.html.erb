@@ -1,0 +1,22 @@
+<h1 class="my-5">Formulario series</h1>
+
+<%= form_with model: @serie, method: :post do |form| %>
+    <div class="col-4">
+        <div class="mb-3">
+            <%= form.label :name, "Nombre", class:"form-label" %>
+            <%= form.text_field :name, class:"form-control" %>
+        </div>
+        <div class="mb-3">
+            <%= form.label :synopsis, "Sinopsis", class:"form-label" %>
+            <%= form.text_field :synopsis, class:"form-control" %>
+        </div>
+        <div class="mb-5">
+            <%= form.label :director, "Director", class:"form-label" %>
+            <%= form.text_field :director, class:"form-control" %>
+        </div>
+        <div>
+            <%= form.submit "Enviar", class:"btn btn-primary" %>
+        </div>
+    </div>
+<% end %>
+

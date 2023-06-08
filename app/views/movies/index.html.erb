@@ -1,0 +1,15 @@
+<h1 class="my-5">Peliculas</h1>
+
+<div class="my-5">
+    <% @movies.each do |m| %>
+        <div class="card border-secondary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Id: <%=  m.id %></div>
+            <div class="card-body text-secondary">
+                <h5 class="card-title"><%=  m.name %></h5>
+                <p class="card-text"><%= m.synopsis %></p>
+            </div>
+            <div class="card-footer bg-transparent border-secondary"><%= m.director %></div>
+        </div>
+    <% end %>
+</div>
+<%= link_to "Agregar nuevo película", movies_new_path, class:"btn btn-secondary"%>

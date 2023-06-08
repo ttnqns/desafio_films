@@ -1,0 +1,15 @@
+<h1 class="my-5">Series</h1>
+
+<div class="my-5">
+    <% @series.each do |s| %>
+        <div class="card border-secondary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Id: <%=  s.id %></div>
+            <div class="card-body text-secondary">
+                <h5 class="card-title"><%=  s.name %></h5>
+                <p class="card-text"><%= s.synopsis %></p>
+            </div>
+            <div class="card-footer bg-transparent border-secondary"><%= s.director %></div>
+        </div>
+    <% end %>
+</div>
+<%= link_to "Agregar nuevo serie", series_new_path, class:"btn btn-secondary"%>

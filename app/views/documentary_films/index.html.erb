@@ -1,0 +1,15 @@
+<h1 class="my-5">Documentales</h1>
+
+<div class="my-5">
+    <% @documentary_films.each do |d| %>
+        <div class="card border-secondary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Id: <%=  d.id %></div>
+            <div class="card-body text-secondary">
+                <h5 class="card-title"><%=  d.name %></h5>
+                <p class="card-text"><%= d.synopsis %></p>
+            </div>
+            <div class="card-footer bg-transparent border-secondary"><%= d.director %></div>
+        </div>
+    <% end %>
+</div>
+<%= link_to "Agregar nuevo documental", documentary_films_new_path, class:"btn btn-secondary"%>
